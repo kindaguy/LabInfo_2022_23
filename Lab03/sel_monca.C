@@ -27,7 +27,7 @@ int main(){
     */
 
     if( a < 0 ){ //Blocco 1
-        a = -1*a;
+        a = -1*a; //Una sola istruzione
     }
      //No Blocco 2
      //Prosegue l'esecuzione    

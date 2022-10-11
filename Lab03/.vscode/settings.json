@@ -9,6 +9,9 @@
       "iter_post copy.C": "cpp",
       "iter_post_0.C": "cpp",
       "sol_es5.C": "cpp",
-      "iter_pre_post.C": "cpp"
+      "iter_pre_post.C": "cpp",
+      "selezione.C": "cpp",
+      "sol_es1.C": "cpp",
+      "sol_es2.C": "cpp"
    }
 }

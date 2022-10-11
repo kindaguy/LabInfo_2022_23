@@ -1,5 +1,5 @@
-/*In questo esercizio supponiamo che i valori di cui vogliamo
-calcolare la somma siano voti. Pertanto l'inserimento di valori < 18
+/*In questo esercizio suppoiamo di voler inserire un voto (accademico).
+ Pertanto l'inserimento di valori < 18
 o maggiori di 30 (la lode non conta) non sara` valido.*/
 
 #include <iostream>
@@ -18,7 +18,7 @@ int main(){
         cin >> a;
     } while(a<18 or a>30 ); //Equivalentemente (a<18 || a>30 )
 
-    cout << endl << "Voto letto: " << a << endl;
+    cout << endl << "Voto valido letto: " << a << endl;
 
 
     return 0;

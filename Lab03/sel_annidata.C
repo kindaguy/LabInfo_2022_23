@@ -19,7 +19,7 @@ int main(){
     cout << endl <<  "Valori inseriti: " << a <<"; " << b << endl;
     
     if (a>0 and b> 0){
-
+        //Esempio di selezione annidata
         if (a>=b){
             c=a/b;
         }
