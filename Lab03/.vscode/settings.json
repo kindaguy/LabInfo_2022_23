@@ -1,0 +1,14 @@
+{
+   "files.associations": {
+      "sel_monca.C": "cpp",
+      "sel_annidata.C": "cpp",
+      "iter_prec.C": "cpp",
+      "iter_prec copy.C": "cpp",
+      "iter_post.C": "cpp",
+      "mcdTama_alt.C": "cpp",
+      "iter_post copy.C": "cpp",
+      "iter_post_0.C": "cpp",
+      "sol_es5.C": "cpp",
+      "iter_pre_post.C": "cpp"
+   }
+}
