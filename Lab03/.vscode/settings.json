@@ -12,6 +12,8 @@
       "iter_pre_post.C": "cpp",
       "selezione.C": "cpp",
       "sol_es1.C": "cpp",
-      "sol_es2.C": "cpp"
+      "sol_es2.C": "cpp",
+      "sol_es3.C": "cpp",
+      "sol_es4.C": "cpp"
    }
 }
