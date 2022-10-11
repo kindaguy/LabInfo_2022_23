@@ -1,4 +1,5 @@
 # ignore all *.o *.x files
 *.x
 *.o
- 
+.DS_Store
+.vscode 
