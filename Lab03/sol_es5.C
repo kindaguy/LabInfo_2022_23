@@ -27,7 +27,7 @@ int main(){
         //Istruzione di lettura da tastiera
         cout << endl << "Inserire voto (18-30). Zero per terminare: ";
         cin >> a;
-    } while((a<18 or a>30) and a!=0); //Equivalentemente (a<18 || a>30 && a != 0)
+    } while((a<18 or a>30) and a!=0); //Equivalentemente ((a<18 || a>30) && a != 0)
 
 
 
@@ -43,7 +43,7 @@ int main(){
             cout << endl << "Inserire voto (18-30). Zero per terminare: ";
             //Istruzione di lettura da tastiera
             cin >> a;
-      } while((a<18 or a>30) and a!=0); //Equivalentemente (a<18 || a>30 && a != 0)
+      } while((a<18 or a>30) and a!=0); //Equivalentemente ((a<18 || a>30) && a != 0)
 
     }
 

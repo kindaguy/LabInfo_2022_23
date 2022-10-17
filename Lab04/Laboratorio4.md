@@ -61,7 +61,7 @@ P.P.S.: __|a| = fabs(a)__ (__fabs__ definita in __cmath__).
 
 ## Esercizio 7
 
-Scrivere le funzioni __minimoArray__ e __massimoArray__ che preso in ingresso un array di __float__ e un intero che indica il numero di dati presenti nell'array, restituiscano rispettivamente la posizione del minimo e del massimo valore contenuto nell'array.
+Scrivere le funzioni __minimoArray__ e __massimoArray__ che preso in ingresso un array di __float__ e un intero che indica il numero di dati presenti nell'array, restituiscano rispettivamente la _posizione_ del minimo e del massimo valore contenuto nell'array.
 
 Scrivere quindi un programma che, caricato un array di __float__ di 40 elementi con qualche valore, usi le funzioni definite per determinare il valore minimo e massimo inseriti e  li stampi a video.
 
@@ -85,28 +85,15 @@ NOTA: __void__: è la parola chiave del C++ per indicare un "non tipo". Le funzi
 
 ## Esercizio 9
 
-## Esercizio 1
-Scrivere un programma che chieda all'utente di inserire un numero intero positivo fino a che l'utente non inserisce effettivamente un numero positivo. Obbligatorio l'uso di un ciclo post-condizionale.
+Scrivere una funzione __balance__ che:
 
-## Esercizio 2
-Scrivere un programma che legga in ingresso una sequenza di numeri interi positivi terminata dall'inserimento, da parte dell'utente, dello zero. Il programma, oltre a calcolare la somma e la media aritmetica dei valori inseriti (vedi esercizio 4 settimana 2), dovrà anche calcolare la _varianza del campione_ definita come:
-![](varcamp.jpeg) 
+- Legga da tastiera una sequenza di valori interi (strettamente positivi o strettamente negativi) terminata dal valore sentinella zero.
+- Determini se il numero degli elementi positivi inseriti è maggiore del numero degli elementi negativi inseriti. In tal caso la funzione deve restituire il valore __true__; altrimenti la funzione deve restituire il valore __false__.
 
-## Esercizio 3
-Estendere le funzionalità del programma scritto per l'__Esercizio 2__ alla determinazione dei valori validi (>0) più grandi e più piccoli inseriti. Stampare a video anche gli elementi minimo e massimo individuati.
+NOTA: quale è il tipo del _dominio_ della funzione? E del codominio?
 
-## Esercizio 4
-Modificare le funzioni contenute nel file __stat01.C__ sostituendo ai cicli __while__ precondizionali presenti gli equivalenti cicli __for__.
+## Esercizio 10
 
-## Esercizio 5
-Dichiarato un vettore di 5 interi, modificare l'esercizio 4 in modo tale che:
+Scrivere una funzione __detectSeq__ che, letta una sequenza di valori interi positivi terminata dal valore sentinella zero determini se nella sequenza inserita sono stati inseriti almeno una volta 4 valori consecutivi strettamente maggiori di 10. In tal caso, la funzione dovrà restituire __true__, altrimenti la funzione dovrà restituire __false__.
 
-1. L'utente inserisce 5 dati validi (questa volta >= 18). I dati validi vengano ciascuno memorizzato in una componente del vettore: il primo dato valido nella prima componente del vettore, il secondo dato valido nella seconda, e così via....
-2.  Terminato l'inserimento dei dati il programma dovrà calcolare media e deviazione standard dei dati inseriti, insieme a minimo e massimo.
-3. Per il calcolo della media e della deviazione standard, usate le funzioni contenute nel file __stat01.C__ (modificato nell'esercizio precedente. Copiate e incollate!)
-4. Definite invece due funzioni __myMax__ e __myMin__ che, presi in ingresso un array di interi e la sua dimensione, restituiscano, rispettivamente, il valore massimo e minimo contenuti nel vettore.
-
-
-__NOTA__: al punto __5.1__ cominciate assumendo che l'utente inserisca solo dati validi. Aggiungere poi un controllo nel luogo opportuno.
-__SUGGERIMENTO__: per il controllo, usate il codice prodotto nell'__Esercizio 1__ dentro al __for__.
-__ATTENZIONE__ Le funzioni in __stat01.C__ sono definite per vettori di __float__. Modificatele per lavorare su vettori di __int__. E occhio alle divisioni!!!!
+Attenzione: la funzione dovrà ignorare eventuali valori negativi inseriti.
