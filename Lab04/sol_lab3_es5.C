@@ -24,11 +24,14 @@ int main(){
     //L'ENUNCIATO/blocco viene (ri-)eseguito se la condizione e` vera.
     
 
+    //Ingresso: nulla
     do{
         //Istruzione di lettura da tastiera
         cout << endl << "Inserire voto (18-30). Zero per terminare: ";
         cin >> a;
     } while((a<18 or a>30) and a!=0); //Equivalentemente ((a<18 || a>30) && a != 0)
+
+    //uscita: un valore valido, ovvero o nel range o 0.
 
     //Attenzione alle formule booleane:
     //La condizione che ci obbliga a RICHIEDERE IL VALORE
@@ -62,6 +65,12 @@ int main(){
     cout << endl << "conta = " << conta << endl;
     cout << endl << "somma = " << somma << endl;
 
+    if(conta !=0)
+        cout << endl << "media = " << (float)somma / conta << endl;
+    
+    else
+        cout << endl << "Non hai voti da mediare!" << endl;    
+    
     //Completare...stampare media aritmetica dei valori.
 
     

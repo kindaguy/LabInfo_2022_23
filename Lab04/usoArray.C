@@ -10,8 +10,12 @@ using namespace std;
 
 int main(){
 
+   //Dichiaro una n-upla di 10 elementi interi (int)
    int vett[10];
+
+   //Dichiaro una n-upla di 3 elementi float
    float fv[3];
+
 
 
    int conta = 0;
@@ -24,7 +28,7 @@ int main(){
    cout << endl << fv[0] << " " << fv[1] << " " << fv[2] << endl;
 
 
-
+   //conta vale inizialmente 0
    while (conta <10){
       vett[conta] = conta;
       conta++; //conta = conta+1;
@@ -34,5 +38,14 @@ int main(){
       cout << endl << vett[conta];
 
    cout << endl;
+
+   //Equivalente a
+   //  conta = 0;
+   //  while(conta < 10){
+
+   //     cout << endl << vett[conta];
+   //     conta++; 
+   //  }
+
    return 0;
 }
