@@ -29,7 +29,7 @@ int main(){
 
    int posEl;
 
-   samplesize = caricaDatiFile("dati.dat",data,DIM_MAX);
+   samplesize = caricaDatiFile("dati_short.dat",data,DIM_MAX);
 
    if(samplesize == -1){ //E` successo un pasticcio, non posso proseguire
       cout << endl << "Problema apertura file. Non posso fare altro e esco" << endl;
@@ -46,9 +46,12 @@ int main(){
       cout << endl;
    }
 
+   
    cout << endl <<"Posizione elemento da eliminare: ";
    cin >> posEl;
 
+   
+   cout << endl << "EliminaShift" << endl;
    newsize = eliminaShift(data,posEl,samplesize);
    cout << endl << "nuova dimensione: " << newsize << endl;
    cout << endl << "Stampo dati: " << endl;
@@ -58,10 +61,13 @@ int main(){
       }
 
    
+  
    cout << endl <<"Posizione elemento da eliminare: ";
    cin >> posEl;
 
+   cout << endl << "EliminaSwap" << endl;
    newsize = eliminaSwap(data,posEl,newsize);
+
    cout << endl << "nuova dimensione: " << newsize << endl;
    cout << endl << "Stampo dati: " << endl;
    //Stampo volutamente anche gli elementi non piu` validi per mostrare il comportamento
@@ -81,7 +87,7 @@ int caricaDatiFile(char nomefile[], float vdati[], int maxdati){
    ifstream filedati;
    int conta = 0;
 
-   filedati.open("dati.dat");
+   filedati.open(nomefile);
 
    if(filedati.fail()){
 

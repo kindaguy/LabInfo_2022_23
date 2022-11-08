@@ -2,7 +2,7 @@
 
 Il caricamento/la scrittura di dati da/su file richiede l'uso di uno strumento nuovo: gli __fstream__, o _file stream_. Il caricamento di dati da file, inoltre, può essere facilitato dall'uso di array dinamicamente allocati di dimensione determinata a runtime.
 
-Nota metodologica: nelle slides delle lezioni 5 e 6 trovate la documentazione di ___tutti___ gli strumenti che vi servono per questa sessione di esercitazione.
+Nota metodologica: nelle slides delle lezioni 5 e 6 trovate la documentazione di ___tutti___ gli strumenti che vi servono per questa sessione di laboratorio.
 
 
 ## Esercizio 1 (Ciclo Spoletini)
