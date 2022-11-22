@@ -72,7 +72,7 @@ Provate a implementare l'operazione di resize verso il basso riversando gli __nG
 
 ## Esercizio 6
 
-Il file "puntiPiano.dat" contiene un numero non precisato di coordinate del punti sul piano cartesiano. Ciascun punto è descritto su una riga da due valori razionali in doppia precisione, il primo indica l'ascissa, il secondo l'ordinata. Una volta determinato e stampato a video il numero di punti descritti nel file, contare il numero di punti che cadono dentro ad una circonferenza di raggio unitario centrata nell'origine del piano O=(0,0). Per svolgere l'esercizio potrebbe essere utile definire la t-upla
+Il file "puntiPiano.dat" contiene un numero non precisato di coordinate di punti sul piano cartesiano. Ciascun punto è descritto su una riga da due valori razionali in doppia precisione, il primo indica l'ascissa, il secondo l'ordinata. Una volta determinato e stampato a video il numero di punti descritti nel file, contare il numero di punti che cadono dentro ad una circonferenza di raggio unitario centrata nell'origine del piano O=(0,0). Per svolgere l'esercizio potrebbe essere utile definire la t-upla
 
 __struct puntoR2{double x; double y};__
 
