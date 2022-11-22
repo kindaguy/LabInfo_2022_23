@@ -1,86 +1,54 @@
-# Laboratorio 6: allocazione dinamica, struct, myArrayT
+# Laboratorio 7: array di struct
 
+Gli esercizi che seguono sono strettamente sequenziali e correlati. Lo svolgimento degli stessi deve portare all'implementazione di un _unico_ programma eseguibile.
 
 ## Esercizio 1
-Il file __misure.dat__ contiene un numero non precisato di misure razionali (in singola precisione). Contare e stampare a video il numero di dati registrati sul file. Caricare quindi i dati in un vettore allocato dinamicamente di dimensione pari al numero di dati su file.
+Il file __buche.dat__ contiene, riga per riga, la descrizione di un numero imprecisato di _cerchi (buche)_, che garantiamo essere disgiunti, sul piano. Ciascun cerchio è descritto da una quadrupla contenente, nell'ordine, le coordinate del centro $(x_c,y_c)$, espresse come razionali in singola precisione, il raggio del cerchio (sempre __float__) e un'etichetta (__char__). 
 
-Tutte queste operazioni devono delegate a due funzioni. La prima
+Definita la t-upla 
 
-__int contaDati(char nomefile[])__
+__struct buca{ 
+    float xc; //Ascissa centro
+    float yc; //Ordinata centro
+    float r;  //Raggio
+    char lab; //Etichetta
+    int n_part; //Vedi dopo...
+};__
 
-deve restituire il numero di dati presenti su file (-1 in caso di problemi); la seconda
-
-__float * caricaDati(char nomefile[], int dim)__
-
-deve invece:
-- Allocare dinamicamente un vettore di dimensione __dim__,
-- Inserire nel vettore i valori presenti su file,
-- Restituire l'indirizzo del vettore allocato (__NULL__ se qualcosa va storto).
+caricare tutti i cerchi descritti nel file __buche.dat__ in  un vettore di __buca__ allocato dinamicamente. Stampare a video il numero di cerchi letti e  la loro descrizione $(x_c,y_c, \text{raggio}, \text{etichetta})$. Il campo __n_part__  verrà riempito in seguito. 
 
 ## Esercizio 2
+Il file __particelle.dat__  contiene, riga per riga, la descrizione di un numero imprecisato di _punti materiali_ (particelle) sul piano. Ciascuna particella è descritta da una quadrupla $(x,y,c,m)$ dove $x$ e $y$ sono le coordinate della particella, $c$ \`e un intero relativo che indica la carica della particella, e $m$ la sua massa.
 
-Definire una funzione:
+Definita la struttura
+__struct part{
+   float x; //Ascissa particella
+   float y; //Ordinata particella
+   int c;   //Carica particella
+   float m; //Massa particella
+};__
 
-__float *caricaDatiFile(char nomefile[], int *pDim)__
+caricare tutte le particelle descritte nel file __particelle.dat__ in un vettore di __part__ allocato dinamicamente. Stampare a video il numero di particelle descritte nel file e la descrizione delle prime 3 e delle ultime 3 particelle caricate.
 
-che, usando le funzioni __contaDati__ e __caricaDati__ definite nell'esercizio precedente, si occupi di:
-
-- caricare i dati in un vettore di __float__ allocato dinamicamente, e restituire l'indirizzo di inizio dell'array stesso in uscita.
-- registrare il numero dei dati (ovvero la lunghezza dell'array) per riferimento sulla variabile intera passata per riferimento (indirizzo) alla funzione stessa.
 
 ## Esercizio 3
 
-Dichiarata la struttura: 
+Per ogni cerchio caricato nell'Esercizio 1, contare e stampare a video il numero di particelle che ricadono al suo interno (circonferenza esclusa), aggiornare 
+di conseguenza il campo __n_part__. Stampare a video e sul file __risultati.dat__ la descrizione aggiornata dei cerchi, il numero complessivo di particelle che cadono dentro ai cerchi e il numero di particelle che non cadono in nessun cerchio. 
 
-__struct myArrayFloat{__
-    __int size;__
-    __int used;__
-    __float *raw;__
-__};__
+Per lo svolgimento di questo esercizio potrebbe essere utile usare la soluzione dell'Esercizio 6.6, ovvero usare una versione, opportunamente modificata, della funzione
 
-modificare la funzione dell'esercizio precedente in modo tale che, preso in ingresso il nome del file, resituisca un __myArrrayFloat__ opportunamente inizializzato con i valori del file __misure.dat__. Altrimenti detto la funzione avrà _signature_
-
-__myArrayFloat caricaDatiFile(char nomefile[])__
-
-e restituirà una __struct__ di tipo __myArrayFloat__ con:
-
-- campo __dim__: numero di dati sul file.
-- campo __used__: numero di dati su file. Infatti l'array è dimensionato per contenere esattamente i dati su file.
-- campo __raw__: contiene indirizzo dell'array allocato dinamicamente e contenente i dati. 
-     
+__bool isIn(puntoR2 p, double r)__.
 
 ## Esercizio 4
 
-Usando una variabile
+Per ogni cerchio, determinare, stampare a video e registrare sul file __risultati.dat__, già usato nell'esercizio precedente, le coordinate del centro di massa del sistema fatto dalle particelle all'interno del cerchio. Ricordiamo che l'ascissa del centro di massa è definita come 
 
-__myArrayFloat dati__
+$x_\text{cm} = \frac{\sum_{i=1}^N x_i m_i}{\sum_{i=1}^N m_i}$,
 
-inizializzata attraverso la funzione __caricaDatiFile("misure.dat")__ [vedi esercizio precedente], calcolare la media e la deviazione standard dei dati ed eliminare gli _outliers_. Stampare a video:
-- il numero (__nBad__) e il valore dei dati eliminati ,
-- il numero (__nGood__) di dati sopravvissuti alla pulizia,
-- il vettore dei dati ripuliti.
+dove $N$ indica il numero di particelle del sistema di particelle considerato $x_i,m_i, i=1,2,\ldots N$ indicano rispettivamente l'ascissa e la massa dell'$i$-esima particella. 
 
-## Esercizio 5
-
-Resize: una delle operazioni più ricorrenti quando si manipolano dati è l'eliminazione degli elementi e, quando necessario, la riduzione (resize verso il basso) degli array che contengono i dati per evitare di lasciare posizioni vuote.
-
-Provate a implementare l'operazione di resize verso il basso riversando gli __nGood__ dati non outliers ottenuti nell'esercizio precedente in un vettore di dimensione __nGood__:
-1- allocando un nuovo vettore di dimensione __nGood__
-2- ricopiando i primi __nGood__ dati dal vecchio vettore dei dati al nuovo.
-3- eliminando il vecchio vettore (quello di dimensione __nGood+nBad__ per intenderci
-4- assegnando al campo __raw__ di __dati__ l'indirizzo del nuovo vettore.
-
-## Esercizio 6
-
-Il file "puntiPiano.dat" contiene un numero non precisato di coordinate del punti sul piano cartesiano. Ciascun punto è descritto su una riga da due valori razionali in doppia precisione, il primo indica l'ascissa, il secondo l'ordinata. Una volta determinato e stampato a video il numero di punti descritti nel file, contare il numero di punti che cadono dentro ad una circonferenza di raggio unitario centrata nell'origine del piano O=(0,0). Per svolgere l'esercizio potrebbe essere utile definire la t-upla
-
-__struct puntoR2{double x; double y};__
-
-e definire una funzione 
-
-__bool isIn(puntoR2 p, double r)__
-
-che restituisce __true__ se il punto si trova all'interno della circonferenza di centro nell'origine e raggio __r__, false altrimenti. 
+Lascio alla vostra fantasia la definizione  dell'ordinata del centro di massa...
 
 
-
+NOTA: controllate la documentazione di __\<fstream\>__ per capire come aprire un file esistente e appendere nuovo testo.
