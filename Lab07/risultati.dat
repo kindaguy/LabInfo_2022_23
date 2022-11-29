@@ -1,0 +1,61 @@
+g++ -c soluzioneTama_20190211.C  `root-config --cflags` `root-config --libs`
+g++ soluzioneTama_20190211.o funzioni.o -o soluzioneTama_20190211.x  `root-config --cflags` `root-config --libs`
+./soluzioneTama_20190211.x
+
+Numero buche: 4
+
+Descrizione buche
+
+(2	10	2	A	0	0)
+(10	5	3	B	0	0)
+(-5	-10	4	C	0	0)
+(-10	2	4	D	0	0)
+
+Numero particelle: 130
+
+Descrizione prime 3 e ultime 3 particelle:
+
+(-9.19	-9.44	7	0.57)
+(-2.4	-9.05	-7	0.24)
+(-13.22	0.24	5	0.22)
+(7.26	8.1	7	0.49)
+(-12.36	-3.03	4	0.69)
+(-7.81	6.68	-1	0.33)
+(7.68	7.02	-5	0.79)
+
+Particelle per buca: 
+
+Buca A; npart: 13
+
+Buca B; npart: 7
+
+Buca C; npart: 7
+
+Buca D; npart: 18
+
+Particelle nel cerchio A: 
+
+(3.82	9.54	-3	0.56)
+(0.98	10.84	0	0.79)
+(3.8	9.17	-4	0.76)
+(2.44	8.64	5	0.87)
+(3.16	8.4	-2	0.59)
+(2.58	8.8	-9	0.66)
+(1.88	9.04	-6	0.79)
+(1.17	9.68	-3	0.43)
+(1.95	8.87	-8	0.88)
+(1.29	9.93	-10	0.6)
+(2.65	10.9	-3	0.1)
+(1.75	9.62	-2	0.42)
+(3.32	9.94	-4	0.46)
+
+Cerchio: D; n_part: 18
+Cerchio: A; n_part: 13
+Cerchio: C; n_part: 7
+Cerchio: B; n_part: 7
+
+massa: 7.37; carica media: 0.722222
+massa: 7.91; carica media: -3.76923
+massa: 3.71; carica media: -1
+massa: 3.96; carica media: -2.71429
+makefile:8: recipe for target 'esegui' failed
