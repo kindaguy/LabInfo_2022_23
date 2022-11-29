@@ -36,7 +36,7 @@ Fornire una stima Monte Carlo dell'integrale, usando, con attenzione, una delle 
 
  ![](integrale.jpeg)
  
- usando M=20 _misure_ ciscuna delle quali usa _k=50_ punti estratti a caso nell'intervallo [0,2]. Calcolare la stima dell'integrale (media delle _M_ misure) e la deviazione standard del campione delle misure. Cosa succede se usiamo _k=100,150,200_ punti per ogni misura? ATTENZIONE: fate riferimento alla vesione aggionrata delle slides, dove un errore (per cui mi scuso) è stato corretto.
+ usando M=20 rilevazioni ciscuna delle quali usa _k=50_ punti estratti a caso nell'intervallo [0,2]. Calcolare la stima (misura) dell'integrale (media delle _M_ misure) e la deviazione standard del campione delle misure. Cosa succede se usiamo _k=100,150,200_ punti per ogni misura? ATTENZIONE: fate riferimento alla vesione aggionrata delle slides, dove un errore (per cui mi scuso) è stato corretto.
  
  ## Esercizio 3
 
