@@ -20,6 +20,12 @@ __myArrayInt caricaArrayIntFile(const char nomefile[])__
 
 che, preso in ingresso il nome del file come stringa, restituisca un valore di tipo __myArrayInt__, opportunamente inizializzato usando il contenuto del file.
 
+__NOTA__: __const char nomefile[]__ il qualificatore __const__ indica che il parametro formale e` un vettore di caratteri costante. Questo evita il __warning__ che si otteneva incompilazione quando si chiamava la funzione come, ad esempio
+
+__vatt1 = caricaArrayIntFile("numeri_tama.dat")__
+
+Il parametro attuale __"numeri_tama.dat"__ e`  infatti, tecnicamente, una stringa (vettore di caratteri) costante....
+
 ## Esercizio 3
 Implementare la funzione di ordinamento per selezione _selsort_ discussa a lezione. Ricordiamo che il metodo di ordinamento prevede di individuare, all'_i_-esimo passaggio dopo passaggio, l'elemento più piccolo del (sotto)vettore di indici in $[i,\text{used}-1]$. In particolare la funzione dovrà avere _signature_
 
