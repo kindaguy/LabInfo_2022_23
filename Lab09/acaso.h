@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <ctime>
 
+//Inizializza il seme usando il tempo
 void initRand();
 
 
