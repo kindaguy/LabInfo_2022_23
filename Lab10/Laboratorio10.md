@@ -28,7 +28,7 @@ __void sortArrayfloat(float v[], int dim);__
 
 ## Esercizio 3
 
-Modificare la di ricerca per bisezione, implementata per vettori ordinati di interi, in modo tale che ricerchi un elemento in un vettore di __float__. Aggiungere a questa funzione un parametro __float eps__ (epsilon) così che la funzione restituisca la posizione del primo elemento $v_i$ trovato nell'array tale che  $\left | v_i_-key \right | <ϵ.
+Modificare la di ricerca per bisezione, implementata per vettori ordinati di interi, in modo tale che ricerchi un elemento in un vettore di __float__. Aggiungere a questa funzione un parametro __float eps__ (epsilon) così che la funzione restituisca la posizione del primo elemento $v_i$ trovato nell'array tale che  $\left | v_i - key \right | < \epsilon $.
 
 __int binarySearchInt(float v[], int left, int right, float key, float eps)__
 
