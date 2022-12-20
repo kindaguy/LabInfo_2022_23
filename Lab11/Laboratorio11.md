@@ -1,4 +1,4 @@
-# Laboratorio 10: Ordinamento e dintorni
+# Laboratorio 11: Ordinamento e dintorni
 
 Partiamo da un semplice esercizio sull'uso dei riferimenti/alias. Discutiamo poi l'implementazione del MergeSort per l'ordinamento di un vettore di dati semplici (__int__). Applicheremo quindi algoritmi di ordinamento a vettori di t-uple: questo ci consentirà di toccare con mano l'ordinamento per chiave, e verificare che una volta implementato un algoritmo di ordinamento per un tipo di dato, lo stesso può essere adattato ad altri tipi di dato con modifiche minime.
 
